@@ -22,9 +22,30 @@ h1{
     margin-right: 7%;
 
     top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
 }
 
 .greetings{
     font-weight: bolder;
     font-size: 1.25rem;
+}
+ 
+.refresh-btn{
+    background: none;
+    font-size: 1.3rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.quote{
+    font-size: 1.5rem;
+}
+
+.author{
+    font-weight: bolder;
+    font-size: 1.2rem;
 }

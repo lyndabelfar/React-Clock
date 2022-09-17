@@ -29,14 +29,14 @@ function App() {
     SetQuotes(data)
     
   }
-  const handleRefreshBtn =()=>{
-    let newNum = num +1; 
+  const handleRefresh = ()=>{
+    let newNum = num+1;
     SetNum(newNum)
   }
 
   useEffect(()=>{
     fetchData()
-  },[num])
+  },[])
   const randomQuoteIndex = Math.round(Math.random()*quotes.length);
 
   
@@ -50,13 +50,11 @@ function App() {
             <div className="quote">{quotes[randomQuoteIndex].text}</div>
             <div className="author">{quotes[randomQuoteIndex].author}</div>
           </div>
-          <button className="refresh-btn" onClick={handleRefreshBtn}>Refresh</button>
+          <button className="refresh-btn" onClick={handleRefresh} >Refresh</button>
         </div>
 
         <div className="greetings">
-          {
-            4>hours>18?'Good Morning! It is currently':'Good Evening! It is currently'
-          }
+          {4>hours>18?'Good Morning! It is currently':'Good Evening! It is currently'}
         </div>
         <h1 className="time">{time}</h1> 
       </div>
